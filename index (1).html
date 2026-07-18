@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Delanta Estifanos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== መግቢያ (Header) ===== -->
+    <header class="welcome-header">
+        <h1>📚 እንኳን ደህና መጣህ!</h1>
+        <h2>Learn Delanta Estifanos</h2>
+        <p>ከ1-12 ክፍል ተማሪዎች ለሁሉም ነጻ የትምህርት መድረክ</p>
+        <p class="sub">በአማርኛ እና በእንግሊዘኛ</p>
+    </header>
+
+    <!-- ===== የተማሪ ዳሽቦርድ ===== -->
+    <div class="container">
+
+        <!-- የፍለጋ ክፍል -->
+        <section class="search-section">
+            <h2>🔎 ኮርሶችን ፈልግ</h2>
+            <input type="text" placeholder="ኮርስ ፈልግ..." class="search-input">
+            <div class="search-tags">
+                <span class="tag">📐 ሂሳብ</span>
+                <span class="tag">⚛️ ፊዚክስ</span>
+                <span class="tag">🧬 ባዮሎጂ</span>
+                <span class="tag">🇬🇧 እንግሊዘኛ</span>
+            </div>
+        </section>
+
+        <!-- የእድገት መለኪያ -->
+        <section class="progress-section">
+            <h2>📊 የትምህርት እድገት</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%;">0%</div>
+            </div>
+            <p class="progress-text">0% ተጠናቋል</p>
+        </section>
+
+        <!-- የኮርሶች ዝርዝር -->
+        <section class="courses-section">
+            <h2>📚 ኮርሶች</h2>
+            <div class="cards">
+                <a href="#" class="card">📐 ሂሳብ</a>
+                <a href="#" class="card">⚛️ ፊዚክስ</a>
+                <a href="#" class="card">🧬 ባዮሎጂ</a>
+                <a href="#" class="card">🇬🇧 እንግሊዘኛ</a>
+            </div>
+        </section>
+
+        <!-- የማስታወቂያ ክፍል -->
+        <section class="announcements">
+            <h2>🔔 ማስታወቂያዎች</h2>
+            <ul>
+                <li>📢 እንኳን ወደ Learn Delanta Estifanos በደህና መጣህ!</li>
+                <li>📝 የሂሳብ ጥያቄዎች ተዘጋጅተዋል</li>
+                <li>🎥 አዲስ የፊዚክስ ቪዲዮ ተለቅቋል</li>
+                <li>🏆 ሁሉንም ትምህርቶች አጠናቅቀህ የምስክር ወረቀት አግኝ</li>
+            </ul>
+        </section>
+<!-- ===== የቪዲዮ ክፍል ===== -->
+<section class="videos">
+    <h2>🎥 የትምህርት ቪዲዮዎች</h2>
+    <p class="section-desc">ከዚህ በታች ያሉትን ቪዲዮዎች ተመልከት እና ተማር</p>
+    
+    <div class="video-grid">
+        <!-- ቪዲዮ 1 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>📐 የሂሳብ ትምህርት 1</h3>
+                <p>የክፍል 1 የሂሳብ መግቢያ ትምህርት</p>
+                <span class="video-tag">ሂሳብ</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 2 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>⚛️ የፊዚክስ ትምህርት 1</h3>
+                <p>የክፍል 1 የፊዚክስ መግቢያ ትምህርት</p>
+                <span class="video-tag">ፊዚክስ</span>
+            </div>
+        </div>
+
+     <!-- ===== የቪዲዮ ክፍል ===== -->
+<section class="videos">
+    <h2>🎥 የትምህርት ቪዲዮዎች</h2>
+    <p class="section-desc">ከዚህ በታች ያሉትን ቪዲዮዎች ተመልከት እና ተማር</p>
+    
+    <!-- የምድብ ማጣሪያ -->
+    <div class="video-filters">
+        <button class="filter-btn active" data-filter="all">ሁሉም</button>
+        <button class="filter-btn" data-filter="math">📐 ሂሳብ</button>
+        <button class="filter-btn" data-filter="physics">⚛️ ፊዚክስ</button>
+        <button class="filter-btn" data-filter="biology">🧬 ባዮሎጂ</button>
+        <button class="filter-btn" data-filter="english">🇬🇧 እንግሊዘኛ</button>
+    </div>
+
+    <div class="video-grid">
+        <!-- ===== የሂሳብ ቪዲዮዎች ===== -->
+        
+        <!-- ቪዲዮ 1 -->
+        <div class="video-card" data-category="math">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>📐 ሂሳብ ትምህርት 1</h3>
+                <p>የክፍል 1 የሂሳብ መግቢያ</p>
+                <span class="video-tag">ሂሳብ</span>
+                <span class="video-duration">⏱️ 10:30</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 2 -->
+        <div class="video-card" data-category="math">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>📐 ሂሳብ ትምህርት 2</h3>
+                <p>የክፍል 1 ሂሳብ መሰረታዊ ስሌቶች</p>
+                <span class="video-tag">ሂሳብ</span>
+                <span class="video-duration">⏱️ 15:20</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 3 -->
+        <div class="video-card" data-category="math">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>📐 ሂሳብ ትምህርት 3</h3>
+                <p>የክፍል 2 ሂሳብ - መደመር እና መቀነስ</p>
+                <span class="video-tag">ሂሳብ</span>
+                <span class="video-duration">⏱️ 12:45</span>
+            </div>
+        </div>
+
+        <!-- ===== የፊዚክስ ቪዲዮዎች ===== -->
+        
+        <!-- ቪዲዮ 4 -->
+        <div class="video-card" data-category="physics">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>⚛️ ፊዚክስ ትምህርት 1</h3>
+                <p>የክፍል 1 ፊዚክስ መግቢያ</p>
+                <span class="video-tag">ፊዚክስ</span>
+                <span class="video-duration">⏱️ 11:15</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 5 -->
+        <div class="video-card" data-category="physics">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>⚛️ ፊዚክስ ትምህርት 2</h3>
+                <p>የክፍል 1 ፊዚክስ - እንቅስቃሴ</p>
+                <span class="video-tag">ፊዚክስ</span>
+                <span class="video-duration">⏱️ 14:30</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 6 -->
+        <div class="video-card" data-category="physics">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>⚛️ ፊዚክስ ትምህርት 3</h3>
+                <p>የክፍል 2 ፊዚክስ - ኃይል</p>
+                <span class="video-tag">ፊዚክስ</span>
+                <span class="video-duration">⏱️ 13:50</span>
+            </div>
+        </div>
+
+        <!-- ===== የባዮሎጂ ቪዲዮዎች ===== -->
+        
+        <!-- ቪዲዮ 7 -->
+        <div class="video-card" data-category="biology">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>🧬 ባዮሎጂ ትምህርት 1</h3>
+                <p>የክፍል 1 ባዮሎጂ መግቢያ</p>
+                <span class="video-tag">ባዮሎጂ</span>
+                <span class="video-duration">⏱️ 9:45</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 8 -->
+        <div class="video-card" data-category="biology">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>🧬 ባዮሎጂ ትምህርት 2</h3>
+                <p>የክፍል 1 ባዮሎጂ - ህዋሳት</p>
+                <span class="video-tag">ባዮሎጂ</span>
+                <span class="video-duration">⏱️ 16:20</span>
+            </div>
+        </div>
+
+        <!-- ===== የእንግሊዘኛ ቪዲዮዎች ===== -->
+        
+        <!-- ቪዲዮ 9 -->
+        <div class="video-card" data-category="english">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>🇬🇧 እንግሊዘኛ ትምህርት 1</h3>
+                <p>የክፍል 1 እንግሊዘኛ መግቢያ</p>
+                <span class="video-tag">እንግሊዘኛ</span>
+                <span class="video-duration">⏱️ 10:00</span>
+            </div>
+        </div>
+
+        <!-- ቪዲዮ 10 -->
+        <div class="video-card" data-category="english">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>🇬🇧 እንግሊዘኛ ትምህርት 2</h3>
+                <p>የክፍል 1 እንግሊዘኛ - መሰረታዊ ቃላት</p>
+                <span class="video-tag">እንግሊዘኛ</span>
+                <span class="video-duration">⏱️ 12:30</span>
+            </div>
+        </div>
+    </div>
+</section>   <!-- ቪዲዮ 3 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <iframe 
+                    width="100%" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>🧬 የባዮሎጂ ትምህርት 1</h3>
+                <p>የክፍል 1 የባዮሎጂ መግቢያ ትምህርት</p>
+                <span class="video-tag">ባዮሎጂ</span>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- የምስክር ወረቀት -->
+        <section class="certificate">
+            <h2>🏆 የምስክር ወረቀት</h2>
+            <div class="certificate-box">
+                <h3>Certificate of Completion</h3>
+                <p>This certificate is proudly presented to</p>
+                <p class="student-name">_____________</p>
+                <p>For successfully completing the course at</p>
+                <p class="school-name">Learn Delanta Estifanos</p>
+            </div>
+        </section>
+
+        <!-- የምዘና ክፍል -->
+        <section class="rating">
+            <h2>⭐ ጣቢያውን ደረጃ ስጥ</h2>
+            <div class="stars">
+                <span>⭐</span>
+                <span>⭐</span>
+                <span>⭐</span>
+                <span>⭐</span>
+                <span>⭐</span>
+            </div>
+            <p class="rating-text">እስካሁን ምዘና የለም</p>
+        </section>
+
+    </div>
+   <!-- ===== የፈተና ክፍል ===== -->
+<section class="quiz-section">
+    <h2>📝 የእውቀት መጠይቅ (Quiz)</h2>
+    <p class="section-desc">እያንዳንዱን ጥያቄ በጥንቃቄ አንብብ እና ትክክለኛውን መልስ ምረጥ</p>
+
+    <!-- የእድገት አመልካች -->
+    <div class="quiz-progress">
+        <span>ጥያቄ 1/5</span>
+        <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" style="width: 20%;"></div>
+        </div>
+    </div>
+
+    <!-- ጥያቄ 1 -->
+    <div class="quiz-question active" data-question="1">
+        <h3>ጥያቄ 1: የሂሳብ</h3>
+        <p>5 + 3 = ?</p>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="a"> 6
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="b"> 7
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="c"> 8
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="d"> 9
+            </label>
+        </div>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <!-- ጥያቄ 2 -->
+    <div class="quiz-question" data-question="2">
+        <h3>ጥያቄ 2: የእንግሊዘኛ</h3>
+        <p>"Cat" በአማርኛ ምን ማለት ነው?</p>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="a"> ውሻ
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="b"> ድመት
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="c"> አእዋፍ
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="d"> አሳ
+            </label>
+        </div>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <!-- ጥያቄ 3 -->
+    <div class="quiz-question" data-question="3">
+        <h3>ጥያቄ 3: የፊዚክስ</h3>
+        <p>ውሃ በምን የሙቀት መጠን ይፈላል?</p>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="a"> 50°C
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="b"> 80°C
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="c"> 100°C
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="d"> 120°C
+            </label>
+        </div>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <!-- ጥያቄ 4 -->
+    <div class="quiz-question" data-question="4">
+        <h3>ጥያቄ 4: የባዮሎጂ</h3>
+        <p>የሰው ልጅ ምን ያህል ክሮሞሶም አለው?</p>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="q4" value="a"> 42
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q4" value="b"> 44
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q4" value="c"> 46
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q4" value="d"> 48
+            </label>
+        </div>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <!-- ጥያቄ 5 -->
+    <div class="quiz-question" data-question="5">
+        <h3>ጥያቄ 5: አጠቃላይ</h3>
+        <p>Learn Delanta Estifanos ምን ያህል ክፍሎችን ያስተምራል?</p>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="q5" value="a"> 1-6
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q5" value="b"> 1-8
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q5" value="c"> 1-10
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q5" value="d"> 1-12
+            </label>
+        </div>
+        <div class="quiz-feedback"></div>
+    </div>
+
+    <!-- የፈተና አዝራሮች -->
+    <div class="quiz-buttons">
+        <button class="quiz-prev" disabled>◀ ቀዳሚ</button>
+        <button class="quiz-next">ቀጣይ ▶</button>
+        <button class="quiz-submit" style="display:none;">✅ ፈተና አስገባ</button>
+    </div>
+
+    <!-- የውጤት ክፍል -->
+    <div class="quiz-result" style="display:none;">
+        <h3>🎉 ፈተናህ ተጠናቋል!</h3>
+        <p class="result-score">ውጤትህ: <span class="score-number">0</span>/5</p>
+        <p class="result-message"></p>
+        <button class="quiz-restart">🔄 እንደገና ፈትን</button>
+    </div>
+</section>   <!-- ===== የአስተያየት ክፍል ===== -->
+<section class="comments">
+    <h2>💬 የተማሪዎች አስተያየቶች</h2>
+    <p class="section-desc">ሌሎች ተማሪዎች ስለ Learn Delanta Estifanos ምን አሉ?</p>
+
+    <div class="comment-list">
+        <!-- አስተያየት 1 -->
+        <div class="comment-item">
+            <div class="comment-avatar">👩‍🎓</div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>Sara</strong>
+                    <span class="comment-date">ቅዳሜ, ሐምሌ 18, 2026</span>
+                </div>
+                <p>በጣም ጥሩ የትምህርት መድረክ ነው! በቀላሉ እየተማርኩ ነው። እመሰግናለሁ! ⭐⭐⭐⭐⭐</p>
+                <div class="comment-actions">
+                    <button class="like-btn">👍 ደስ አለኝ (12)</button>
+                    <button class="reply-btn">💬 መልስ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- አስተያየት 2 -->
+        <div class="comment-item">
+            <div class="comment-avatar">👨‍🎓</div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>Abel</strong>
+                    <span class="comment-date">ዓርብ, ሐምሌ 17, 2026</span>
+                </div>
+                <p>ቪዲዮዎቹ በጣም ግልጽ ናቸው። ሂሳብ ቀላል ሆኖልኝ አግኝቼዋለሁ። ቀጥሉበት! 🌟</p>
+                <div class="comment-actions">
+                    <button class="like-btn">👍 ደስ አለኝ (8)</button>
+                    <button class="reply-btn">💬 መልስ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- አስተያየት 3 -->
+        <div class="comment-item">
+            <div class="comment-avatar">👩‍🎓</div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <strong>Hanna</strong>
+                    <span class="comment-date">ሐሙስ, ሐምሌ 16, 2026</span>
+                </div>
+                <p>እኔ ፊዚክስ እየተማርኩ ነው። በጣም አስደሳች ነው! ለሁሉም እመክራለሁ። 🚀</p>
+                <div class="comment-actions">
+                    <button class="like-btn">👍 ደስ አለኝ (5)</button>
+                    <button class="reply-btn">💬 መልስ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- አዲስ አስተያየት ለመጨመር ቅጽ -->
+    <div class="comment-form">
+        <h3>✨ አስተያየትህን አጋራ</h3>
+        <input type="text" placeholder="ስምህን ጻፍ" class="comment-input">
+        <textarea placeholder="አስተያየትህን እዚህ ጻፍ..." rows="3" class="comment-textarea"></textarea>
+        <button class="comment-submit">📤 አስተያየት ላክ</button>
+    </div>
+</section>
+    <!-- ===== የግርጌ (Footer) ===== -->
+    <footer>
+        <p>🌟 ለትምህርት ሁሉም እኩል ነው!</p>
+        <p>© 2026 Learn Delanta Estifanos | በአማርኛ እና በእንግሊዘኛ</p>
+        <p class="footer-email">📧 ለጥያቄዎች: learn.delanta@gmail.com</p>
+    </footer>
+
+</body>
+</html>  <!-- ===== About Us ክፍል ===== -->
+<section class="about-us">
+    <h2>👥 ስለኛ (About Us)</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <h3>📚 Learn Delanta Estifanos</h3>
+            <p>Learn Delanta Estifanos ከ1-12 ክፍል ተማሪዎች ለሁሉም ነጻ የትምህርት መድረክ ነው።</p>
+            <p>የኛ ተልዕኮ ሁሉም ተማሪ በቀላሉ እና በነጻ የትምህርት እድል እንዲያገኝ ማድረግ ነው።</p>
+            <p>በዚህ መድረክ በአማርኛ እና በእንግሊዘኛ የተዘጋጁ ትምህርቶችን በቪዲዮ እና በጽሁፍ መልኩ ያገኛሉ።</p>
+            
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">ክፍሎች</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">ቪዲዮዎች</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">ተማሪዎች</span>
+                </div>
+            </div>
+        </div>
+        <div class="about-team">
+            <h4>👨‍🏫 መምህራን</h4>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="team-avatar">👨‍🏫</div>
+                    <div class="team-info">
+                        <strong>Estifanos Dems</strong>
+                        <span>መስራች እና ዋና መምህር</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">👩‍🏫</div>
+                    <div class="team-info">
+                        <strong>Sara M.</strong>
+                        <span>የሂሳብ መምህር</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar">👨‍🏫</div>
+                    <div class="team-info">
+                        <strong>Abel K.</strong>
+                        <span>የፊዚክስ መምህር</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
