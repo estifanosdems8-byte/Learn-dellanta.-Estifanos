@@ -1,533 +1,36 @@
-// Quiz System
+// ===== የደረጃ ምርጫ =====
+const gradeBtns = document.querySelectorAll('.grade-btn');
+const gradeContents = document.querySelectorAll('.grade-content');
 
-function answer(){
+// መጀመሪያ ክፍል 9 እንዲታይ አድርግ
+document.querySelector('.grade-content[data-grade="9"]').classList.add('active');
+document.querySelector('.grade-btn[data-grade="9"]').classList.add('active');
 
-document.getElementById("result").innerHTML =
-"Correct Answer! 🎉";
-
-}
-
-
-
-// Certificate Generator
-
-function certificate(){
-
-let name =
-document.getElementById("name").value;
-
-
-if(name===""){
-
-document.getElementById("certificateText").innerHTML =
-"Please enter your name";
-
-}
-
-else{
-
-document.getElementById("certificateText").innerHTML =
-"🏆 Certificate<br><br>" +
-"This certificate is awarded to<br>" +
-"<b>" + name + "</b><br><br>" +
-"For completing Learn Delanta Estifanos Course";
-
-}
-
-}
-
-
-
-// Simple Login Message
-
-const loginButton =
-document.querySelector("#login button");
-
-
-if(loginButton){
-
-loginButton.onclick=function(){
-
-alert("Login Successful!");
-
-}
-
-}
-
-
-
-// Register Message
-
-const registerButton =
-document.querySelector("#register button");
-
-
-if(registerButton){
-
-registerButton.onclick=function(){
-
-alert("Account Created Successfully!");
-
-}
-
-}
-
-
-
-// Start Learning Button
-
-const startButton =
-document.querySelector(".hero button");
-
-
-if(startButton){
-
-startButton.onclick=function(){
-
-document
-.getElementById("courses")
-.scrollIntoView({
-behavior:"smooth"
+gradeBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        gradeBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        const grade = this.dataset.grade;
+        gradeContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.dataset.grade === grade) {
+                content.classList.add('active');
+            }
+        });
+    });
 });
 
-}
-
-}
-
-
-
-// Dark Mode Function
-
-function darkMode(){
-
-document.body.classList.toggle("dark");
-
-}const questions = [
-
-{
-q:"5 + 5 = ?",
-a:["8","10","12","15"],
-correct:"10"
-},
-
-{
-q:"10 x 10 = ?",
-a:["50","100","150","200"],
-correct:"100"
-},
-
-{
-q:"Square root of 64?",
-a:["6","7","8","9"],
-correct:"8"
-}
-
-];
-
-
-let qIndex=0;
-let score=0;
-
-
-function loadQuiz(){
-
-let q=questions[qIndex];
-
-document.getElementById("quizQuestion").innerHTML=q.q;
-
-
-let box=document.getElementById("quizAnswers");
-
-box.innerHTML="";
-
-
-q.a.forEach(answer=>{
-
-let btn=document.createElement("button");
-
-btn.innerHTML=answer;
-
-
-btn.onclick=function(){
-
-if(answer==q.correct){
-
-score++;
-
-}
-
-};
-
-box.appendChild(btn);
-
-});
-
-
-}
-
-
-document.getElementById("nextQuestion").onclick=function(){
-
-qIndex++;
-
-
-if(qIndex < questions.length){
-
-loadQuiz();
-
-}
-
-else{
-
-document.getElementById("quizQuestion").innerHTML=
-"Quiz Finished 🎉";
-
-
-document.getElementById("quizScore").innerHTML=
-"Your Score: "+score+"/"+questions.length;
-
-
-}
-
-};
-
-
-loadQuiz();function registerStudent(){
-
-let name =
-document.getElementById("regName").value;
-
-let email =
-document.getElementById("regEmail").value;
-
-let password =
-document.getElementById("regPassword").value;
-
-
-localStorage.setItem("studentEmail",email);
-
-localStorage.setItem("studentPassword",password);
-
-localStorage.setItem("studentName",name);
-
-
-document.getElementById("accountMessage").innerHTML =
-"Account Created Successfully ✅";
-
-}
-
-
-
-function loginStudent(){
-
-let email =
-document.getElementById("loginEmail").value;
-
-let password =
-document.getElementById("loginPassword").value;
-
-
-if(
-email==localStorage.getItem("studentEmail")
-&&
-password==localStorage.getItem("studentPassword")
-){
-
-document.getElementById("accountMessage").innerHTML =
-"Welcome "+localStorage.getItem("studentName")+" 🎉";
-
-}
-
-else{
-
-document.getElementById("accountMessage").innerHTML =
-"Wrong Email or Password ❌";
-
-}
-
-}function showStudent(){
-
-let name = localStorage.getItem("studentName");
-
-
-if(name){
-
-document.getElementById("studentWelcome").innerHTML =
-"Welcome, " + name + " 🎓";
-
-}
-
-}
-
-
-showStudent(); function searchCourse(){
-
-let input =
-document.getElementById("searchInput")
-.value.toLowerCase();
-
-
-let courses =
-document.querySelectorAll("#courseResult p");
-
-
-courses.forEach(function(course){
-
-if(course.innerHTML.toLowerCase().includes(input)){
-
-course.style.display="block";
-
-}
-
-else{
-
-course.style.display="none";
-
-}
-
-});
-
-}function toggleDarkMode(){
-
-document.body.classList.toggle("dark-mode");
-
-if(document.body.classList.contains("dark-mode")){
-
-localStorage.setItem("theme","dark");
-
-}else{
-
-localStorage.setItem("theme","light");
-
-}
-
-}
-
-window.addEventListener("load",function(){
-
-if(localStorage.getItem("theme")=="dark"){
-
-document.body.classList.add("dark-mode");
-
-}
-
-});let progress = 0;
-
-function increaseProgress(){
-
-if(progress < 100){
-
-progress += 10;
-
-document.getElementById("progressBar").style.width =
-progress + "%";
-
-document.getElementById("progressText").innerHTML =
-progress + "% Completed";
-
-localStorage.setItem("progress", progress);
-
-}
-
-}
-
-window.addEventListener("load", function(){
-
-let saved = localStorage.getItem("progress");
-
-if(saved){
-
-progress = Number(saved);
-
-document.getElementById("progressBar").style.width =
-progress + "%";
-
-document.getElementById("progressText").innerHTML =
-progress + "% Completed";
-
-}
-
-});function rate(stars){
-
-document.getElementById("ratingResult").innerHTML =
-"Thank you! You rated this website " + stars + " ⭐";
-
-localStorage.setItem("websiteRating", stars);
-
-}
-
-window.addEventListener("load", function(){
-
-let savedRating = localStorage.getItem("websiteRating");
-
-if(savedRating){
-
-document.getElementById("ratingResult").innerHTML =
-"Your saved rating: " + savedRating + " ⭐";
-
-}
-
-});function addComment(){
-
-let comment =
-document.getElementById("commentInput").value;
-
-if(comment.trim()==""){
-return;
-}
-
-let comments =
-JSON.parse(localStorage.getItem("comments")) || [];
-
-comments.push(comment);
-
-localStorage.setItem("comments",
-JSON.stringify(comments));
-
-showComments();
-
-document.getElementById("commentInput").value="";
-
-}
-
-function showComments(){
-
-let comments =
-JSON.parse(localStorage.getItem("comments")) || [];
-
-let list =
-document.getElementById("commentList");
-
-list.innerHTML="";
-
-comments.forEach(function(item){
-
-list.innerHTML +=
-'<div class="comment-box">'+item+'</div>';
-
-});
-
-}
-
-window.addEventListener("load", showComments);function generateCertificate(){
-
-let student =
-localStorage.getItem("studentName") || "Student";
-
-document.getElementById("certificateName").innerHTML =
-student;
-
-let today =
-new Date().toLocaleDateString();
-
-document.getElementById("certificateDate").innerHTML =
-"Date: " + today;
-
-}function submitAssignment(){
-
-let file =
-document.getElementById("assignmentFile").files[0];
-
-if(file){
-
-document.getElementById("assignmentMessage").innerHTML =
-"✅ Assignment submitted: " + file.name;
-
-}else{
-
-document.getElementById("assignmentMessage").innerHTML =
-"❌ Please select a file.";
-
-}
-
-}function searchCourse(){
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let courses = document.querySelectorAll("#courseResult p");
-
-  courses.forEach(course=>{
-    let text = course.innerText.toLowerCase();
-
-    if(text.includes(input)){
-      course.style.display="block";
-    }else{
-      course.style.display="none";
-    }
-  });
-}  function searchCourse(){
-  let input = document.getElementById("searchInput").value.toLowerCase();
-
-  let courses = document.querySelectorAll("#courseResult p");
-
-  courses.forEach(function(course){
-    if(course.innerText.toLowerCase().includes(input)){
-      course.style.display = "block";
-    } else {
-      course.style.display = "none";
-    }
-  });
-} let score = 0;
-let questionNumber = 0;
-
-let questions = [
-  {
-    q:"What is 5 + 5?",
-    a:"10"
-  },
-  {
-    q:"What is the capital of Ethiopia?",
-    a:"Addis Ababa"
-  },
-  {
-    q:"How many planets are in the solar system?",
-    a:"8"
-  }
-];
-
-function showQuestion(){
-  document.getElementById("quizQuestion").innerHTML =
-  questions[questionNumber].q;
-}
-
-function answer(correct){
-  if(correct){
-    score++;
-  }
-  document.getElementById("quizScore").innerHTML =
-  "Score: " + score;
-}
-
-function nextQuestion(){
-  questionNumber++;
-
-  if(questionNumber < questions.length){
-    showQuestion();
-  }else{
-    document.getElementById("quizScore").innerHTML =
-    "Finished! Score: " + score;
-  }
-}
-
-showQuestion();function checkAnswer(correct){
-
-if(correct){
-document.getElementById("result").innerHTML="✅ Correct!";
-}
-else{
-document.getElementById("result").innerHTML="❌ Try Again";
-}
-
-}// ===== የቪዲዮ ማጣሪያ =====
+// ===== የቪዲዮ ማጣሪያ =====
 const filterButtons = document.querySelectorAll('.filter-btn');
 const videoCards = document.querySelectorAll('.video-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-        // ንቁ የሆነውን አዝራር ቀይር
         filterButtons.forEach(btn => btn.classList.remove('active'));
         this.classList.add('active');
         
         const filter = this.dataset.filter;
-        
         videoCards.forEach(card => {
             if (filter === 'all' || card.dataset.category === filter) {
                 card.style.display = 'block';
@@ -536,15 +39,16 @@ filterButtons.forEach(button => {
             }
         });
     });
-});// ===== የፈተና ተግባር =====
+});
+
+// ===== የፈተና ተግባር =====
 let currentQuestion = 1;
-const totalQuestions = 5;
+const totalQuestions = 4;
 const answers = {
     q1: 'c',
     q2: 'b',
     q3: 'c',
-    q4: 'c',
-    q5: 'd'
+    q4: 'c'
 };
 
 const questions = document.querySelectorAll('.quiz-question');
@@ -556,6 +60,7 @@ const scoreSpan = document.querySelector('.score-number');
 const resultMessage = document.querySelector('.result-message');
 const restartBtn = document.querySelector('.quiz-restart');
 const progressFill = document.querySelector('.quiz-progress-fill');
+const progressSpan = document.querySelector('.quiz-progress span');
 
 function showQuestion(num) {
     questions.forEach((q, i) => {
@@ -570,7 +75,7 @@ function showQuestion(num) {
         submitBtn.style.display = 'none';
     }
     progressFill.style.width = ((num / totalQuestions) * 100) + '%';
-    document.querySelector('.quiz-progress span').textContent = `ጥያቄ ${num}/${totalQuestions}`;
+    progressSpan.textContent = `ጥያቄ ${num}/${totalQuestions}`;
 }
 
 function getSelectedAnswer(questionNum) {
@@ -639,8 +144,8 @@ submitBtn.addEventListener('click', () => {
     
     let message = '';
     if (score === totalQuestions) message = '🏆 ፍጹም! በጣም ጥሩ!';
-    else if (score >= 4) message = '🌟 በጣም ጥሩ! ቀጥል!';
-    else if (score >= 3) message = '📚 ጥሩ! ትንሽ ተጨማሪ አጥና!';
+    else if (score >= 3) message = '🌟 በጣም ጥሩ! ቀጥል!';
+    else if (score >= 2) message = '📚 ጥሩ! ትንሽ ተጨማሪ አጥና!';
     else message = '💪 ተጨማሪ ጥረት ያስፈልጋል! ቀጥል!';
     resultMessage.textContent = message;
 });
